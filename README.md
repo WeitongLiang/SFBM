@@ -63,11 +63,4 @@ source("pricing_model.R")
 
 The `data/` folder includes cleaned historical option contract data from the **Shanghai Stock Exchange (SSE 50ETF options)** between October 2021 and August 2022. Data was sourced from the Wind Information Terminal.
 
-## 📚 Citation and Acknowledgments
 
-- Based on original research project by **Weitong Liang** at **Xi’an Jiaotong University**
-- References to related works are included in the PDF
-
-## 📑 License
-
-MIT License (or add your preferred license here).
