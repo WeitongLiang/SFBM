@@ -10,7 +10,7 @@ This repository contains a research project that develops and evaluates an **opt
 
 Sub-fractional Brownian motion (SFBM) provides a non-stationary, non-semimartingale generalization of classical Brownian motion with long-range dependence. This project introduces a mixed-SFBM-driven model for option pricing, extending the classical Black–Scholes framework to account for memory and non-Markovian features observed in real markets.
 
-### Key Contributions
+### Key Points
 
 - Derived the closed-form pricing formula for European call options under mixed SFBM by solving the associated stochastic difference equations.
 - Employed the simulated annealing algorithm to optimize model parameters for best pricing accuracy.
