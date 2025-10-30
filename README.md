@@ -1,20 +1,20 @@
-# Optimal Option Pricing Model Driven by Mixed Sub-Fractional Brownian Motion (SFBM)
+# Mixed Sub-Fractional Brownian Motion for Option Pricing
 
-This repository contains a research project that develops and evaluates an **option pricing model driven by mixed sub-fractional Brownian motion (SFBM)**. The project was supervised by Dr. Matthias Dörrzapf at the University of Cambridge and conducted remotely between July and November 2022.
+This repository presents an independent implementation and evaluation of an **option pricing model driven by mixed sub-fractional Brownian motion (SFBM)**. The project was conducted remotely under the supervision of **Dr. Matthias Dörrzapf** at the University of Cambridge between July and November 2022.
 
  **Full write-up**: [The optional pricing model driven by Mixed SFBM.pdf](./The%20optional%20pricing%20model%20driven%20by%20Mixed%20sfbm.pdf)
 
 ---
 
-##  Overview
+## Project Overview
 
-Sub-fractional Brownian motion (SFBM) provides a non-stationary, non-semimartingale generalization of classical Brownian motion with long-range dependence. This project introduces a mixed-SFBM-driven model for option pricing, extending the classical Black–Scholes framework to account for memory and non-Markovian features observed in real markets.
+Classical Black–Scholes (B–S) models rely on standard Brownian motion, which assumes independent increments and lacks long-term memory. However, financial markets often exhibit long-range dependence and non-Markovian behavior. To capture these features, this project explores **mixed sub-fractional Brownian motion (SFBM)**, a non-stationary generalization that blends standard and fractional components.
 
-### Key Points
+The core contributions of this project include:
 
-- Derived the closed-form pricing formula for European call options under mixed SFBM by solving the associated stochastic difference equations.
-- Employed the simulated annealing algorithm to optimize model parameters for best pricing accuracy.
-- The proposed model improved pricing accuracy by 26% compared to SFBM and 5% over the Black–Scholes model.
+-  Developed a closed-form formula for European call options using stochastic difference equations under mixed SFBM.
+-  Tuned parameters using a simulated annealing algorithm for robust convergence.
+-  Demonstrated improved accuracy over baseline models using SSE 50ETF option price data, achieving improved accuracy over both the B-S model (↑5%) and SFBM model (↑26%).
 
 ---
 ---
@@ -32,6 +32,6 @@ Sub-fractional Brownian motion (SFBM) provides a non-stationary, non-semimarting
 
 ## Author
 
-- Weitong Liang
+- **Weitong Liang**
 
 ---
