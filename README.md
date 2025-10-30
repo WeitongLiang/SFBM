@@ -1,66 +1,37 @@
-# Mixed sfbm Option Pricing Model
+# Optimal Option Pricing Model Driven by Mixed Sub-Fractional Brownian Motion (SFBM)
 
-This repository contains materials for my research project on European call option pricing using **mixed sub-fractional Brownian motion (mixed sfbm)**. The goal is to develop and empirically evaluate an option pricing model that captures long-range dependence and nonstationary increments observed in real financial markets.
+This repository contains a research project that develops and evaluates an **option pricing model driven by mixed sub-fractional Brownian motion (SFBM)**. The project was supervised by Dr. Matthias Dörrzapf at the University of Cambridge and conducted remotely between July and November 2022.
 
-## 📄 Project Summary
+ **Full write-up**: [The optional pricing model driven by Mixed SFBM.pdf](./The%20optional%20pricing%20model%20driven%20by%20Mixed%20sfbm.pdf)
 
-The complete research write-up is provided in the file:
+---
 
-- [`paper/Research_training_WtLiang.pdf`](paper/Research_training_WtLiang.pdf)
+##  Overview
 
-It includes the following components:
+Sub-fractional Brownian motion (SFBM) provides a non-stationary, non-semimartingale generalization of classical Brownian motion with long-range dependence. This project introduces a mixed-SFBM-driven model for option pricing, extending the classical Black–Scholes framework to account for memory and non-Markovian features observed in real markets.
 
-- Background on limitations of traditional Black-Scholes (BS) model
-- Introduction to fractional and sub-fractional Brownian motions
-- Derivation of the option pricing formula using mixed sfbm and Wick-Itô integral
-- Empirical analysis based on SSE 50ETF option data
-- Comparison with BS and sfbm-based models
+### Key Contributions
 
-## 📁 Repository Structure
+- Derived the closed-form pricing formula for European call options under mixed SFBM by solving the associated stochastic difference equations.
+- Employed the simulated annealing algorithm to optimize model parameters for best pricing accuracy.
+- The proposed model improved pricing accuracy by 26% compared to SFBM and 5% over the Black–Scholes model.
 
-```
-mixed-sfbm-option-pricing/
-├── README.md                   # This file
-├── paper/
-│   └── Research_training_WtLiang.pdf     # Full research report
-├── data/
-│   └── SSE_50ETF_options.csv   # Cleaned and preprocessed option data
-├── code/
-│   ├── pricing_model.py        # Implements the mixed sfbm pricing formula
-│   ├── parameter_estimation.py # Parameter tuning using simulated annealing
-│   └── utils.py                # Helper functions (e.g., error calculation, plotting)
-├── results/
-│   └── fig1_closing_prices.png # Sample figures (optional)
-```
+---
+---
 
-> Note: File names are subject to change depending on final implementation.
+## References
 
-## ⚙️ How to Run
+1. Biagini, F., Hu, Y., Øksendal, B., & Zhang, T. (2008). *Stochastic Calculus for Fractional Brownian Motion and Applications*. Springer.
+2. Elliott, R. J., Chan, L., & Siu, T. K. (2005). Option pricing and Esscher transform under regime switching. *Annals of Finance*, 1(4), 423–432.
+3. Mandelbrot, B. B., & Van Ness, J. W. (1968). Fractional Brownian motions, fractional noises and applications. *SIAM Review*, 10(4), 422–437.
+4. Mishura, Y. (2008). *Stochastic Calculus for Fractional Brownian Motion and Related Processes*. Springer.
+5. Shen, Y., & Shiryaev, A. N. (2020). Mixed fractional Brownian motion: properties and applications. *Theory of Probability and Its Applications*, 65(1), 98–114.
+6. Yan, Z., & Shen, Y. (2021). A new mixed sub-fractional Brownian motion model for option pricing. *Applied Mathematics and Computation*, 394, 125798.
 
-The code scripts under `code/` include:
+---
 
-- Simulation of the mixed sfbm process
-- Parameter estimation using sample data
-- Option price computation
-- Model comparison (mixed sfbm vs BS vs sfbm)
+## Author
 
-Example (Python):
+- Weitong Liang
 
-```bash
-cd code
-python parameter_estimation.py
-python pricing_model.py
-```
-
-Or (R):
-
-```r
-source("parameter_estimation.R")
-source("pricing_model.R")
-```
-
-## 📈 Data
-
-The `data/` folder includes cleaned historical option contract data from the **Shanghai Stock Exchange (SSE 50ETF options)** between October 2021 and August 2022. Data was sourced from the Wind Information Terminal.
-
-
+---
